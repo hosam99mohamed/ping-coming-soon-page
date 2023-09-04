@@ -1,0 +1,155 @@
+:root {
+  --Blue: hsl(223, 87%, 63%);
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+  --gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 100px 30px 30px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.container .logo {
+  margin-bottom: 35px;
+}
+.container .logo img {
+  width: 100px;
+}
+h1 {
+  margin-bottom: 15px;
+}
+h1 span {
+  color: var(--gray);
+  font-weight: 300;
+}
+p {
+  margin-bottom: 45px;
+  font-weight: 600;
+  color: var(--Very-Dark-Blue);
+}
+form {
+  position: relative;
+  width: 700px;
+  display: flex;
+  margin-bottom: 80px;
+}
+form.error input {
+  border-color: var(--Light-Red);
+}
+form.error .error-text {
+  position: absolute;
+  top: 70px;
+  font-size: 20px;
+  margin-top: 10px;
+  color: var(--Light-Red);
+  font-weight: 500;
+  font-style: italic;
+}
+form input {
+  width: 500px;
+  padding: 20px;
+  border-radius: 50px;
+  margin-right: 20px;
+  border: 2px solid var(--Pale-Blue);
+  font-size: 20px;
+}
+form input:focus {
+  outline: none;
+}
+form input::placeholder {
+  color: var(--gray);
+  opacity: 0.5;
+}
+form button {
+  width: 200px;
+  padding: 20px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--Blue);
+  color: white;
+  font-size: 20px;
+  box-shadow: 0px 5px 10px 0px var(--Pale-Blue);
+}
+.image img {
+  width: 700px;
+}
+footer {
+  margin-top: 50px;
+}
+footer ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+footer ul li {
+  position: relative;
+  margin-right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  border: 2px solid var(--Pale-Blue);
+}
+footer ul li a {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25px;
+}
+footer .copy {
+  font-size: 25px;
+  color: var(--gray);
+  font-weight: 300;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 700px;
+  }
+  .container .logo {
+    margin-bottom: 75px;
+  }
+  .container h1 {
+    margin-bottom: 30px;
+  }
+  .container p {
+    margin-bottom: 70px;
+  }
+  .container form {
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 150px;
+  }
+  .container form input {
+    margin-bottom: 80px;
+  }
+  .container form button {
+    width: 500px;
+    margin-right: 20px;
+  }
+  .container .image img {
+    width: 600px;
+    margin-bottom: 150px;
+  }
+  footer ul {
+    margin-bottom: 75px;
+  }
+}
